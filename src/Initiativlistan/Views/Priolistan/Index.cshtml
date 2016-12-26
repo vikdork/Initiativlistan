@@ -1,0 +1,137 @@
+@model IEnumerable<Initiativlistan.Models.Priolista>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.akut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.beroende)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.beskrivAkut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.beskrivning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.beställare)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.budget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.finnsIPlan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.framtidaPåverkan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.förvaltning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kategorisering)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kostnader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.namnPåAktvivitet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nuvarandePåverkan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tidasram)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typAvFörändring)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.verksamhetspåverkarn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ärendeägare)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.önskatDatum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.akut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beroende)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beskrivAkut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beskrivning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beställare)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.budget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.finnsIPlan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.framtidaPåverkan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.förvaltning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kategorisering)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kostnader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.namnPåAktvivitet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nuvarandePåverkan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tidasram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typAvFörändring)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.verksamhetspåverkarn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ärendeägare)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.önskatDatum)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

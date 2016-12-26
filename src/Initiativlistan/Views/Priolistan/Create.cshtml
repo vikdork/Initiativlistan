@@ -1,0 +1,155 @@
+@model Initiativlistan.Models.Priolista
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Priolista</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="akut" />
+                    <label asp-for="akut"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="beroende" class="col-md-2 control-label">test</label>
+            <div class="col-md-10">
+                <input asp-for="beroende" class="form-control" />
+                <span asp-validation-for="beroende" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="beskrivAkut" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="beskrivAkut" class="form-control" />
+                <span asp-validation-for="beskrivAkut" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="beskrivning" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="beskrivning" class="form-control" />
+                <span asp-validation-for="beskrivning" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="beställare" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="beställare" class="form-control" />
+                <span asp-validation-for="beställare" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="budget" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="budget" class="form-control" />
+                <span asp-validation-for="budget" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="finnsIPlan" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="finnsIPlan" class="form-control" />
+                <span asp-validation-for="finnsIPlan" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="framtidaPåverkan" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="framtidaPåverkan" class="form-control" />
+                <span asp-validation-for="framtidaPåverkan" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="förvaltning" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="förvaltning" class="form-control" />
+                <span asp-validation-for="förvaltning" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="kategorisering" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="kategorisering" class="form-control" />
+                <span asp-validation-for="kategorisering" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="kostnader" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="kostnader" class="form-control" />
+                <span asp-validation-for="kostnader" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="namnPåAktvivitet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="namnPåAktvivitet" class="form-control" />
+                <span asp-validation-for="namnPåAktvivitet" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="nuvarandePåverkan" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="nuvarandePåverkan" class="form-control" />
+                <span asp-validation-for="nuvarandePåverkan" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="tidasram" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="tidasram" class="form-control" />
+                <span asp-validation-for="tidasram" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="typAvFörändring" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="typAvFörändring" class="form-control" />
+                <span asp-validation-for="typAvFörändring" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="verksamhetspåverkarn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="verksamhetspåverkarn" class="form-control" />
+                <span asp-validation-for="verksamhetspåverkarn" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ärendeägare" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ärendeägare" class="form-control" />
+                <span asp-validation-for="ärendeägare" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="önskatDatum" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="önskatDatum" class="form-control" />
+                <span asp-validation-for="önskatDatum" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
