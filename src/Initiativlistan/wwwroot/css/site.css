@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #f1f2f2
 }
 
 /* Wrapping element */
@@ -23,23 +24,6 @@ textarea {
     line-height: 1.4;
 }
 
-/* buttons and links extension to use brackets: [ click me ] */
-.btn-bracketed::before {
-    display:inline-block;
-    content: "[";
-    padding-right: 0.5em;
-}
-.btn-bracketed::after {
-    display:inline-block;
-    content: "]";
-    padding-left: 0.5em;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
-    width: 100%;
-}
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
@@ -47,4 +31,19 @@ textarea {
   .carousel-caption {
     display: none
   }
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    
+}
+
+.navbar-inverse .navbar-brand {
+  color: #000000;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+    color : #000000;
 }

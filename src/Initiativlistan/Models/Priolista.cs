@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace Initiativlistan.Models
@@ -18,7 +19,9 @@ namespace Initiativlistan.Models
         public string kategorisering { get; set; }
         public string nuvarandePåverkan { get; set; }
         public string framtidaPåverkan { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime önskatDatum { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime tidasram { get; set; }
         public string kostnader { get; set; }
         public string budget { get; set; }
