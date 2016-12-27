@@ -4,17 +4,16 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<h2>Beslutsunderlag</h2>
 
 <form asp-action="Create">
     
-        <h4>Priolista</h4>
+       
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="ärendeägare"></label>
-            <input asp-for="ärendeägare" class="form-control" />
-            <span asp-validation-for="ärendeägare" class="text-danger" />
+                <label asp-for="ärendeägare"></label>
+                <input asp-for="ärendeägare" class="form-control" />
         </div>    
         <div class="form-group">
             <label asp-for="beställare"></label>
@@ -86,68 +85,76 @@
                     <input type="text" id="other" disabled asp-for="finnsIPlan">
             </div>   
          </div>
-    
-    <div class="form-group">
-    <label asp-for="typAvFörändring"></label>
-        <br />
-        <select asp-for="typAvFörändring">
-            <option value="RFC <20 h">RFC <20 h</option>
-            <option value="Projekt eller uppdrag >20 h">Projekt eller uppdrag >20 h</option>
-        </select>
-    
-    </div>
-         
-
-
         <div class="form-group">
-            <label asp-for="typAvFörändring"></label>
-            <input asp-for="typAvFörändring" class="form-control" />
-            <span asp-validation-for="typAvFörändring" class="text-danger" />
+        <label asp-for="typAvFörändring"></label>
+            <br />
+            <select asp-for="typAvFörändring">
+                <option value="RFC <20 h">RFC <20 h</option>
+                <option value="Projekt eller uppdrag >20 h">Projekt eller uppdrag >20 h</option>
+            </select>
         </div>
-        <div class="form-group">
-            <label>Är ändringen akut?</label>
-            <div class="checkbox">
-                <label><input type="checkbox" asp-for="akut">Ja</label>
+            <div class="form-group">
+                <label>Är ändringen akut?</label>
+                <div class="checkbox">
+                    <label><input type="checkbox" asp-for="akut">Ja</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox">Nej</label>
+                </div>
             </div>
-            <div class="checkbox">
-                <label><input type="checkbox">Nej</label>
+            <div class="form-group">
+                    <label asp-for="beskrivAkut"></label>
+                    <textarea rows="8" cols="0" asp-for="beskrivAkut" class="form-control"></textarea>
+                    <span asp-validation-for="beskrivAkut" class="text-danger" />
+                </div>
+
+        <div class="form-group">
+            <label asp-for="kategorisering"></label>
+            <div class="radio">
+                <label>
+                    <input type="radio" id="kategorisering1" value="Tjänst" asp-for="kategorisering" />Tjänst
+                </label>
             </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="beskrivAkut"></label>
-            <input asp-for="beskrivAkut" class="form-control" />
-            <span asp-validation-for="beskrivAkut" class="text-danger" />
-        </div>
-        <div class="form-group">
-        <label asp-for="kategorisering"></label>
-        <input asp-for="kategorisering" class="form-control" />
-        <span asp-validation-for="kategorisering" class="text-danger" />
+            <div class="radio">
+                <label>
+                    <input type="radio" id="kategorisering1" value="Stödtjänst" asp-for="kategorisering" />Stödtjänst
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" id="kategorisering1" value="Produkt" asp-for="kategorisering" />Produkt
+                </label>
+            </div>
         </div>
         <div class="form-group">
             <label asp-for="nuvarandePåverkan"></label>
-            <input asp-for="nuvarandePåverkan" class="form-control" />
+            <textarea rows="8" cols="0" asp-for="nuvarandePåverkan" class="form-control"></textarea>
             <span asp-validation-for="nuvarandePåverkan" class="text-danger" />
-        </div>
+        </div>    
         <div class="form-group">
             <label asp-for="framtidaPåverkan"></label>
-            <input asp-for="framtidaPåverkan" class="form-control" />
+            <textarea rows="8" cols="0" asp-for="framtidaPåverkan" class="form-control"></textarea>
             <span asp-validation-for="framtidaPåverkan" class="text-danger" />
         </div>
+        
         <div class="form-group">
-            <label asp-for="önskatDatum"></label>
-            <input asp-for="önskatDatum" class="form-control" />
-            <span asp-validation-for="önskatDatum" class="text-danger" />
+                <label asp-for="önskatDatum"></label>
+                <input style="width:200px;" type="date" asp-for="önskatDatum" class="form-control" />
         </div>
+    <br />
         <div class="form-group">
             <label asp-for="tidasram"></label>
-            <input asp-for="tidasram" class="form-control" />
-            <span asp-validation-for="tidasram" class="text-danger" />
+            <input style="width:200px;" type="date" asp-for="tidasram" class="form-control" />
+
         </div>
-        <div class="form-group">
-            <label asp-for="kostnader"></label>
-            <input asp-for="kostnader" class="form-control" />
-            <span asp-validation-for="kostnader" class="text-danger" />
-        </div>
+   
+    <div class="form-group">
+        <label asp-for="kostnader"></label>
+        <textarea rows="8" cols="0" asp-for="kostnader" class="form-control"></textarea>
+        <span asp-validation-for="kostnader" class="text-danger" />
+    </div>
+
+        
         <div class="form-group">
             <label asp-for="budget"></label>
             <input asp-for="budget" class="form-control" />
@@ -158,11 +165,12 @@
             <textarea asp-for="beroende" class="form-control" rows="5" cols="0"></textarea>
             <span asp-validation-for="beroende" class="text-danger" />
         </div>
-        <div class="form-group">
-            <label asp-for="verksamhetspåverkarn"></label>
-            <input asp-for="verksamhetspåverkarn" class="form-control" />
-            <span asp-validation-for="verksamhetspåverkarn" class="text-danger" />
-        </div>
+    <div class="form-group">
+        <label asp-for="verksamhetspåverkarn"></label>
+        <textarea rows="8" cols="0" asp-for="verksamhetspåverkarn" class="form-control"></textarea>
+        <span asp-validation-for="verksamhetspåverkarn" class="text-danger" />
+    </div>
+        
         <div class="form-group">
             <input type="submit" value="Create" class="btn btn-default" />
         </div>
@@ -178,10 +186,11 @@
     
     <script>
         $("#finnsPlan5").click(function () { $("#other").prop("disabled", false); });
-        $("#finnsPlan1").click(function () { $("#other").prop("disabled", true); });
-        $("#finnsPlan2").click(function () { $("#other").prop("disabled", true); });
-        $("#finnsPlan3").click(function () { $("#other").prop("disabled", true); });
-        $("#finnsPlan4").click(function () { $("#other").prop("disabled", true); });
-    </script>
+        finnsPlan5.onclick = function () { finnsPlan1.checked = false, finnsPlan2.checked = false, finnsPlan3.checked = false, finnsPlan4.checked = false };
+        finnsPlan1.onclick = function () { finnsPlan5.checked = false, other.disabled = true };
+        finnsPlan2.onclick = function () { finnsPlan5.checked = false, other.disabled = true };
+        finnsPlan3.onclick = function () { finnsPlan5.checked = false, other.disabled = true };
+        finnsPlan4.onclick = function () { finnsPlan5.checked = false, other.disabled = true };
+        </script>
  }
 
