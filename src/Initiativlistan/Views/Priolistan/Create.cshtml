@@ -13,11 +13,11 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
                 <label asp-for="ärendeägare"></label>
-                <input asp-for="ärendeägare" class="form-control" />
+                <input asp-for="ärendeägare" class="form-small" />
         </div>    
         <div class="form-group">
             <label asp-for="beställare"></label>
-            <input asp-for="beställare" class="form-control" />
+            <input asp-for="beställare" class="form-small" />
             <span asp-validation-for="beställare" class="text-danger" />
         </div>  
         <div class="form-group">
@@ -31,68 +31,78 @@
             <span asp-validation-for="beskrivning" class="text-danger" />
         </div>
         <div class="form-group">
-            <label asp-for="förvaltning"></label>
-            <div class="radio">
-               <label><input type="radio" value="KSF" asp-for="förvaltning" />KSF</label>
+            <div class="col-md-4">
+                <label asp-for="förvaltning"></label>
+                <div class="radio">
+                    <label><input type="radio" value="KSF" asp-for="förvaltning" />KSF</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="KUF" asp-for="förvaltning" />KUF</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="NBF" asp-for="förvaltning" />NBF</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="SÄF" asp-for="förvaltning" />SÄF</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="IT-SG" asp-for="förvaltning" />IT-SG</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="IT-LG" asp-for="förvaltning" />IT-LG</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" value="IT internt" asp-for="förvaltning" />IT internt</label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="KLG" asp-for="förvaltning" />
+                        KLG
+                    </label>
+                </div>
             </div>
-            <div class="radio">
-                <label><input type="radio" value="KUF" asp-for="förvaltning" />KUF</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" value="NBF" asp-for="förvaltning"/>NBF</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" value="SÄF" asp-for="förvaltning"/>SÄF</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" value="IT-SG" asp-for="förvaltning"/>IT-SG</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" value="IT-LG" asp-for="förvaltning"/>IT-LG</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" value="IT internt" asp-for="förvaltning"/>IT internt</label>
-            </div>
-            <div class="radio">
-                <label>
-                <input type="radio" value="KLG" asp-for="förvaltning"/>
-                KLG
-                </label>
-            </div>
-  
         </div>
         <div class="form-group">
-            <label asp-for="finnsIPlan"></label>
-            <div class="radio">
-                <label>
-                    <input type="radio" id="finnsPlan1" value="KSF:s verksamhetsplan" asp-for="finnsIPlan"/>KSF:s verksamhetsplan</label>
-                 </div> 
-            <div class="radio">
-                <label>
-                    <input type="radio"  id="finnsPlan2" value="IT-plan" asp-for="finnsIPlan" />IT-plan</label>
-            </div> 
-            <div class="radio">
-                <label>
-                    <input type="radio" id="finnsPlan3" value="IT-sektionens arbetsplan" asp-for="finnsIPlan" />IT-sektionens arbetsplan</label>
-            </div> 
-            <div class="radio">
-                <label>
-                    <input type="radio" id="finnsPlan4" value="Internkontroll" asp-for="finnsIPlan" />Internkontroll</label>
-            </div>  
-            <div class="radio">
-                <label>
-                    <input type="radio" id="finnsPlan5"/>Other:</label>
+            <div class="col-md-4">
+                <label asp-for="finnsIPlan"></label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" id="finnsPlan1" value="KSF:s verksamhetsplan" asp-for="finnsIPlan" />KSF:s verksamhetsplan
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" id="finnsPlan2" value="IT-plan" asp-for="finnsIPlan" />IT-plan
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" id="finnsPlan3" value="IT-sektionens arbetsplan" asp-for="finnsIPlan" />IT-sektionens arbetsplan
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" id="finnsPlan4" value="Internkontroll" asp-for="finnsIPlan" />Internkontroll
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" id="finnsPlan5" />Other:
+                    </label>
                     <input type="text" id="other" disabled asp-for="finnsIPlan">
-            </div>   
-         </div>
+                </div>
+                </div>
+            </div>
         <div class="form-group">
-        <label asp-for="typAvFörändring"></label>
-            <br />
-            <select asp-for="typAvFörändring">
-                <option value="RFC <20 h">RFC <20 h</option>
-                <option value="Projekt eller uppdrag >20 h">Projekt eller uppdrag >20 h</option>
-            </select>
-        </div>
+            <div class="col-md-3">
+                <label asp-for="typAvFörändring"></label>
+                <br />
+                <select asp-for="typAvFörändring">
+                    <option value="RFC >20 h"> RFC, under 20 h</option>
+                    <option value="Projekt eller uppdrag >20 h">Projekt eller uppdrag, över 20 h</option>
+                </select>
+                </div>
+            </div>
             <div class="form-group">
                 <label>Är ändringen akut?</label>
                 <div class="checkbox">
@@ -157,12 +167,12 @@
         
         <div class="form-group">
             <label asp-for="budget"></label>
-            <input asp-for="budget" class="form-control" />
+            <input asp-for="budget" class="form-small" />
             <span asp-validation-for="budget" class="text-danger" />
         </div>
         <div class="form-group">
             <label asp-for="beroende"></label>
-            <textarea asp-for="beroende" class="form-control" rows="5" cols="0"></textarea>
+            <textarea asp-for="beroende" class="form-control" rows="8" cols="0"></textarea>
             <span asp-validation-for="beroende" class="text-danger" />
         </div>
     <div class="form-group">
